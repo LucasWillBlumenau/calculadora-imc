@@ -6,11 +6,11 @@ const form = document.querySelector('.imc-form');
 function getCondition(height, weight) {
     let imc = weight / (height * height);
     switch (true){
-        case imc <= 18.5 && imc > 0:
-            return "Abaixo do Peso";
         case imc < 18.5 && imc > 0:
-            return "Peso Ideal";
+            return "Abaixo do Peso";
         case imc >= 18.5 && imc < 25:
+            return "Peso Ideal";
+        case imc >= 25 && imc < 30:
             return "Acima do Peso";
         case imc >= 30 && imc < 35:
             return "Obesidade Grau I";
